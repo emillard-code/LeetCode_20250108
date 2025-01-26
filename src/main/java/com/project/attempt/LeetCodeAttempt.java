@@ -10,10 +10,14 @@ public class LeetCodeAttempt {
 
     }
 
+    // This method counts the number of elements that are both prefixes and suffixes of another element.
     public static int countPrefixAndSuffixPairs(String[] words) {
 
         int answer = 0;
 
+        // We loop through words[], and for each element do another loop
+        // where (i < j) as per challenge specifications to find the
+        // number of prefix/suffix combinations among the elements.
         for (int i = 0; i < words.length; i++) {
 
             for (int j = i + 1; j < words.length; j++) {
@@ -28,6 +32,7 @@ public class LeetCodeAttempt {
 
     }
 
+    // A helper method that returns true if str1 is both a prefix and suffix of str2.
     private static boolean isPrefixAndSuffix(String str1, String str2) {
 
         if (str1.length() > str2.length()) { return false; }
